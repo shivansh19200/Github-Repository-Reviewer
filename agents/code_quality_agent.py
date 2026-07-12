@@ -48,7 +48,7 @@ def code_quality_agent(state):
     final_prompt = f"""
     You are a senior software engineer. These are reviews of different parts of one repository:
 
-    {chr("\n").join(reviews)}
+    {chr('\n').join(reviews)}
 
     Combine everything into ONE final report.
 
