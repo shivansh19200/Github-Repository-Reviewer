@@ -43,23 +43,19 @@ def code_quality_agent(state):
             response = llm.invoke([HumanMessage(content=prompt)])
 
             reviews.append(f"""File: {path} 
-                           Response: {response.content}""")
+                           Response: {response.content} \n""")
 
     final_prompt = f"""
     You are a senior software engineer. These are reviews of different parts of one repository:
 
-    {chr('\n').join(reviews)}
+    {"\n".join(reviews)}
 
-    Combine everything into ONE final report.
+    Combine everything into one final report.
 
-    Return
-
+    Return the following things-
     Overall Score: /10
-
     Strengths
-
     Weaknesses
-
     Suggestions
     """
 
