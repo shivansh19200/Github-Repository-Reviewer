@@ -48,12 +48,12 @@ def architecture_agent(state):
             response = llm.invoke([HumanMessage(content=prompt)])
 
             reviews.append(f"""File: {path}
-                           {response.content}""")
+                           {response.content} \n""")
 
     
     final_prompt = f"""You are a senior software architect.Below are architecture reviews of different files from the same repository.
     Repository Structure:   {file_list}
-    Individual Reviews: {chr('\n').join(reviews)}
+    Individual Reviews: {"\n".join(reviews)}
 
     Combine them into ONE final architecture review.
 
