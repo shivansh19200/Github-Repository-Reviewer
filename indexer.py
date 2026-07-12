@@ -1,19 +1,7 @@
 import requests
 
 
-def get_repository_files(owner, repo):
-
-    repo_url = f"https://api.github.com/repos/{owner}/{repo}"
-
-    rb = requests.get(repo_url)
-    
-    if rb.status_code != 200:
-      print("Could not fetch repository")
-      return []
-    
-    response_branch = rb.json()
-
-    branch = response_branch["default_branch"]
+def get_repository_files(owner, repo, branch):
 
     url = f"https://api.github.com/repos/{owner}/{repo}/git/trees/{branch}?recursive=1"
 
