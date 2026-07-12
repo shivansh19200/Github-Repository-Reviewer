@@ -9,6 +9,8 @@ def architecture_agent(state):
 
     files = state["repo"]
 
+    file_list = ""
+
     for file in files:
         file_list += file["path"] + "\n"
 
