@@ -9,7 +9,7 @@ from agents.code_quality_agent import code_quality_agent
 # This is the shared state that every agent can access
 class GraphState(TypedDict):
 
-    repo: str
+    repo: list
 
     architecture_review: str
 
