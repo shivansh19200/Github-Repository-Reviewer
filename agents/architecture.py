@@ -55,16 +55,13 @@ def architecture_agent(state):
     Repository Structure:   {file_list}
     Individual Reviews: {"\n".join(reviews)}
 
-    Combine them into ONE final architecture review.
+    Combine them into one final architecture review.
 
-    Return exactly this format:
+    Return the following things-
 
     Architecture Score: /10
-
     Strengths
-
     Weaknesses
-
     Suggestions
     """
 
