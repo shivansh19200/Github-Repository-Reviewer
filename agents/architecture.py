@@ -53,7 +53,7 @@ def architecture_agent(state):
     
     final_prompt = f"""You are a senior software architect.Below are architecture reviews of different files from the same repository.
     Repository Structure:   {file_list}
-    Individual Reviews: {chr("\n").join(reviews)}
+    Individual Reviews: {chr('\n').join(reviews)}
 
     Combine them into ONE final architecture review.
 
